@@ -1,0 +1,15 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.stars {
+  display: flex;
+  justify-content: center;
+}
+
+.card-body-stars {
+  list-style: none;
+  padding: 0;
+}
