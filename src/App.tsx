@@ -1,5 +1,7 @@
 import { useState } from "react"
 import "./App.css"
+import Listing from "./components/Listing"
+import data from "./components/Listing/data.json"
 import Stars from "./components/Stars"
 import TaskSwitcher from "./components/TaskSwitcher"
 
@@ -16,9 +18,9 @@ const App = () => {
 
       {task == "1" && <Stars count={5} />}
 
-      {task == "2" && <>Task 2</>}
+      {task == "2" && <Listing items={data} />}
 
-      {task == "3" && <>Task 3</>}
+      {/* {task == "3" && <>Task 3</>} */}
     </>
   )
 }
