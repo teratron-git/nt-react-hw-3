@@ -2,6 +2,9 @@ import { useState } from "react"
 import "./App.css"
 import Listing from "./components/Listing"
 import data from "./components/Listing/data.json"
+import MessageHistory from "./components/MessageHistory"
+import st_mes from "./components/MessageHistory/MessageHistory.module.css"
+import messages from "./components/MessageHistory/messages"
 import Stars from "./components/Stars"
 import TaskSwitcher from "./components/TaskSwitcher"
 
@@ -20,7 +23,17 @@ const App = () => {
 
       {task == "2" && <Listing items={data} />}
 
-      {/* {task == "3" && <>Task 3</>} */}
+      {task == "3" && (
+        <div className={`${st_mes.body} `}>
+          <div className={`${st_mes.clearfix} ${st_mes.container}`}>
+            <div className={`${st_mes.chat} `}>
+              <div className={`${st_mes["chat-history"]} `}>
+                <MessageHistory list={messages} />
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </>
   )
 }
